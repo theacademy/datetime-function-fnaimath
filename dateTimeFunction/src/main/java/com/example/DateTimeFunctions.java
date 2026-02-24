@@ -21,10 +21,8 @@ public class DateTimeFunctions {
 	 * Implement the method so that it returns today's date.
 	 */
 	public static LocalDate getTodaysDate() {
-		//YOUR CODE STARTS HERE
-		return null;
-		//YOUR CODE ENDS HERE
-
+		LocalDate today = LocalDate.now();	//finds today's date
+		return today; 
 	}
 
 	/*
@@ -32,10 +30,8 @@ public class DateTimeFunctions {
 	 * the input date.
 	 */
 	public static LocalDate getLaterDatebyDays(LocalDate date, int x) {
-		//YOUR CODE STARTS HERE
-		return null;
-		//YOUR CODE ENDS HERE
-
+		LocalDate dateAfter = date.plusDays(x);		//finds the date plus days
+		return dateAfter;
 	}
 
 	/*
@@ -43,22 +39,19 @@ public class DateTimeFunctions {
 	 * the input date.
 	 */
 	public static LocalDate getPreviousDatebyWeeks(LocalDate date, int x) {
-		//YOUR CODE STARTS HERE
-		return null;
-		//YOUR CODE ENDS HERE
-
+		LocalDate datePrev = date.minusWeeks(x);		//finds the date minus the weeks
+		return datePrev;
 	}
 
 	/*
 	 * Implement the method so that it returns the time difference between two input dates
 	 * in terms of years, months, and days.
-	 * Return the String in the format: "Year-20:Months-5:Days-1"
+	 * Return the String in the format: "Years-20:Months-5:Days-1"
 	 */
 	public static String getTimeDifference(LocalDate date1, LocalDate date2) {
-		//YOUR CODE STARTS HERE
-		return null;
-		//YOUR CODE ENDS HERE
-
+		Period period = Period.between(date1, date2); //subtracts difference between dates
+		String diff = "Years-" + period.getYears()+ ":Months-"+ period.getMonths()+":Days-"+ period.getDays();
+		return diff;
 	}
 
 	public static void main(String[] args) {
